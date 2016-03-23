@@ -732,7 +732,8 @@ std::ifstream myfile (".rates.txt");
 				}
 					getMovie();		
 					shfileout();
-					shfilein();		
+					shfilein();	
+					disprate();	
 				}
 void checkpass()
 {
@@ -808,11 +809,11 @@ label2:
 	obj.checkpass();
 	string uname,pass,un="admin";
 	string pw="admin";
+label1: 
 std::ifstream myfile (".password.txt");
 		myfile >> un;
 		myfile >> pw;
 	myfile.close();
-label1: 
 	system("clear");
 	system("clear");
 	cout<<"\n\n\n\n\n\n\n\n\n\n1 beep = system status good\n2 beeps = system status bad\n\n\n\n\n\n\t\tWelcome to HookmyShoe\n\n\n";
@@ -831,7 +832,8 @@ label:
 system("clear");
 cout<<"\n\n\n\t\t::Welcome to HookmyShoe::\n\n\t\tBest Viewed in fullscreen!\n\t\t\t\t\t\t\t\tPress CTRL+WINDOOWS+UP\n\tEnter 1 to Continue...\n\t      2 for Initialisation...";cin>>q;
 if(q==2)
-{obj.init();}
+{obj.init();
+}
 obj.shfilein();
 obj.Sfilein();
 system("beep");
